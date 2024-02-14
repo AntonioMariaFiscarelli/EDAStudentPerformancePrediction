@@ -1,0 +1,38 @@
+Create git repository called "EDAStudentPerformancePrediction"
+Create local folder called "EDAStudentPerformancePrediction"
+Open Anaconda Prompt
+ cd to "C:\Users\AntonioFisk\Desktop\New PC\Personal Projects\EDAStudentPerformancePrediction"
+ code . (will open visual studio code in the folder)
+Terminal>new Terminal
+ conda create -p venv python==3.8 -y
+ conda activate venv/
+ conda install -c anaconda git
+ install git for Windows
+ #echo "# EDAStudentPerformancePrediction #" >> README.md
+ git init (initializes git repository)
+ git add README.md
+ git config --global user.email "antoniofisk90@gmail.com" (adds email and username of the github repo that it will synch to)
+ git config --global user.name "AntonioMariaFiscarelli"
+ git commit -m "first commit"
+ git status (prints status of the commint)
+ git branch -M main
+ git remote add origin https://github.com/AntonioMariaFiscarelli/EDAStudentPerformancePrediction.git (synchs to the github repo)
+ git remote -v (prints the github repo it is synched to)
+ git push -u origin main
+Go to github repo, add file called ".gitignore", select python language, commit changes
+ git pull (in order to pull thegitignore file)
+
+create files setup.py and requirements.txt
+create folder "src" and create file "__init__.py" in it
+populate the files setup.py and requirements.txt
+ pip install -r requirements.txt
+git add .
+git commit -m "setup"
+git push -u origin main
+
+PT.2
+Create folder "components" with files __init__.py, data_ingestion.py, data_transformazion.py and model_trainer.py
+Create folder "pipeline" with files __init__.py, train_pipeline.py, predict_pipeline.py and model_trainer.py
+Scripts in the pipeline folder will call the scrips in the components folder
+Create files logger.py, exception.py and utils.py, populate them
+
