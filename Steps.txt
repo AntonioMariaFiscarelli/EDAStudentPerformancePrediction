@@ -36,3 +36,10 @@ Create folder "pipeline" with files __init__.py, train_pipeline.py, predict_pipe
 Scripts in the pipeline folder will call the scrips in the components folder
 Create files logger.py, exception.py and utils.py, populate them
 
+PT 3.
+create folder notebook and notebook/data
+run notebooks, select python interpreter/venv when asked 
+install ipykernel as asked
+conda install -p "c:\Users\AntonioFisk\Desktop\New PC\Personal Projects\EDAStudentPerformancePrediction\venv ipykernel --update-deps --force-reinstall'" #will force ipykernerl reinstallation
+!pip install -r ../requirements.txt #run it on the notebook (even though requirements were already installed from the terminal)
+
