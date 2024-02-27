@@ -4,4 +4,4 @@ seaborn
 scikit-learn
 catboost
 xgboost
-#-e .   #used to deploy as package
+-e .

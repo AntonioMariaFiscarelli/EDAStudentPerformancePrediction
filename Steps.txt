@@ -23,6 +23,7 @@ Go to github repo, add file called ".gitignore", select python language, commit 
  git pull (in order to pull thegitignore file)
 
 create files setup.py and requirements.txt
+add "-e ." at the end of requirements.txt. This will allow to use src as a package (to do "importo src.filename")
 create folder "src" and create file "__init__.py" in it
 populate the files setup.py and requirements.txt
  pip install -r requirements.txt
@@ -43,3 +44,20 @@ install ipykernel as asked
 conda install -p "c:\Users\AntonioFisk\Desktop\New PC\Personal Projects\EDAStudentPerformancePrediction\venv ipykernel --update-deps --force-reinstall'" #will force ipykernerl reinstallation
 !pip install -r ../requirements.txt #run it on the notebook (even though requirements were already installed from the terminal)
 
+PT.8 CD on AWS
+on VisualCode: create ElasticBeanStalk configuration file
+on AWS: 
+create instance, and set up environment
+creade codepipeline (for Continous Delivery). as source, select GitHub. no build provider. deplou provider is AWS Elastic Beanstalk
+Every time there is a change in the progect (a new commit) AWS Beanstalk will release and show the change
+
+
+PT.11 CDCI on AWS
+Watch Docker video first: Complete Dockers for Data Science Tutorial  in One Shot.
+1. Check Docker Image
+With DOcker you will be able to create containers regardless the O.S. running on the server
+Add Docker file to the VC project
+2. Create Github workflow folder
+Main YAML file will contain 3 jobs: Integration, build and push ecr image, continous deployment
+The docker image will have to be on AWS,in the ECR repository (Elastic Container Repository)
+Create IAM (Identity access Management)
