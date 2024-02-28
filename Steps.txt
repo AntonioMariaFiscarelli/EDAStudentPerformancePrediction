@@ -44,7 +44,15 @@ install ipykernel as asked
 conda install -p "c:\Users\AntonioFisk\Desktop\New PC\Personal Projects\EDAStudentPerformancePrediction\venv ipykernel --update-deps --force-reinstall'" #will force ipykernerl reinstallation
 !pip install -r ../requirements.txt #run it on the notebook (even though requirements were already installed from the terminal)
 
-PT.8 CD on AWS
+
+P.8 flask app
+Create app.py
+Create templates folder
+	Create index.html
+	Create home.html
+Write predict_pipeline.py file
+
+PT.9 CD on AWS
 on VisualCode: create ElasticBeanStalk configuration file
 on AWS: 
 create instance, and set up environment
