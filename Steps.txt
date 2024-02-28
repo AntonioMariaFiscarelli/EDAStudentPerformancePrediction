@@ -53,7 +53,7 @@ Create templates folder
 Write predict_pipeline.py file
 
 PT.9 CD on AWS
-on VisualCode: create ElasticBeanStalk configuration file
+on VisualCode: create ElasticBeanStalk configuration file (.ebextentions/python.config)
 on AWS: 
 create instance, and set up environment
 creade codepipeline (for Continous Delivery). as source, select GitHub. no build provider. deplou provider is AWS Elastic Beanstalk
