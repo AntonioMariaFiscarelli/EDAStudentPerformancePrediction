@@ -56,8 +56,12 @@ PT.9 CD on AWS
 on VisualCode: create ElasticBeanStalk configuration file (.ebextentions/python.config)
 create a new file application.py (an exact copy of app.py)
 on AWS: 
-create instance, and set up environment
-creade codepipeline (for Continous Delivery). as source, select GitHub. no build provider. deplou provider is AWS Elastic Beanstalk
+create instance, and set up environment.
+Remember to creane IAM profile and new EC2-isntance or create a new one, otherwise the environment won't launch:
+https://www.reddit.com/r/aws/comments/13f2jdg/error_the_instance_profile/
+https://stackoverflow.com/questions/76626720/the-instance-profile-associated-with-the-environment-does-not-exist
+https://stackoverflow.com/questions/30790666/error-with-not-existing-instance-profile-while-trying-to-get-a-django-project-ru
+create codepipeline (for Continous Delivery). as source, select GitHub. no build provider. deplou provider is AWS Elastic Beanstalk
 Every time there is a change in the progect (a new commit) AWS Beanstalk will release and show the change
 
 
