@@ -42,7 +42,9 @@ def predict_datapoint():
         results=predict_pipeline.predict(pred_df)
         print("\n\nafter Prediction\n\n")
         return render_template('home.html',results=results[0])
-    
+
+
+        
 
 if __name__=="__main__":
     #app.run(host="0.0.0.0", port = 5000) # when doing CD with AWS BeanStalk
