@@ -67,10 +67,69 @@ Every time there is a change in the progect (a new commit) AWS Beanstalk will re
 
 PT.11 CDCI on AWS
 Watch Docker video first: Complete Dockers for Data Science Tutorial  in One Shot.
-1. Check Docker Image
-With DOcker you will be able to create containers regardless the O.S. running on the server
+Install Docker Deskto for Windows and login.
+docker images #check existing docker images
+With Docker you will be able to create containers regardless the O.S. running on the server
 Add Docker file to the VC project
+docker build -t edastudentperformanceprediction .
 2. Create Github workflow folder
 Main YAML file will contain 3 jobs: Integration, build and push ecr image, continous deployment
-The docker image will have to be on AWS,in the ECR repository (Elastic Container Repository)
+Where do I get this file. Github -> Actions -> Workflow -> new workflow -> Deploy to Amazon ECS
+The docker image will have to be on AWS, in the ECR repository (Elastic Container Repository,a AWS repository for docker images)
 Create IAM (Identity access Management)
+3. IAM
+Go to AWS -> IAM -> New User. Attach policies manually (AmazonEC2ContainerRegistryFullAccess, AmazonEC2FullAccess)
+Go to the user -> Security Credentials -> Create access key -> select Command Line Interface (CLI) -> no tag -> Create Access Key
+4. CREATE ECR (Elastic Container Repository)
+Search ECR -> Create new repository
+Go to the ECR repo list, copy URL and save it.
+5. CREATE EC2 (cloud server instance)
+Search EC2 -> launch instance
+- Quick Start (select Ubuntu)
+- Instance type (select T2.medium)
+- Key pair login (sample.EC")
+- Allow SSh/HTTPS/HTTP traffic
+6. Connect EC2 instance to ECR
+Go to EC2 Instance -> Connect
+sudo apt-get update -y
+curl -fsSL https://get.docker.com -o get-docker.sh # (min 24:00 on youtube) isntall all required packages wrt docker
+sudo sh get-docker.sh
+sudo usermod -aG docker ubuntu # so that I don't need to use "sudo" every time
+newgrp docker
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
