@@ -105,9 +105,8 @@ Go to Github repository -> Settings -> Actions -> Runner
 Take the command lines and execute them in the EC2 Instance consolle
 Enter name of the runne group: blank
 Enter name of the runner: self-hosted
-Enter lavles: none
-Enter ork folder: blank
-./run/sh
+Enter levels: none
+Enter work folder: blank
 Listening for jobs... any push to the GitHub will be deployed on the EC2
 Go to Github repo -> Secrets and Variables -> Actions -> Add security key -> New repository secret
 Add the ECR AWS_ACCESS_KEY_ID (see step 4)
