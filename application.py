@@ -47,5 +47,5 @@ def predict_datapoint():
 
 
 if __name__=="__main__":
-    app.run(host="0.0.0.0", port = 5000) # when doing CD with AWS BeanStalk
-    #app.run(host="0.0.0.0", port = 8080) # when doing CICD with AWS ECR
+    #app.run(host="0.0.0.0", port = 5000) # when doing CD with AWS BeanStalk
+    app.run(host="0.0.0.0", port = 8080) # when doing CICD with AWS ECR
